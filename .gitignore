@@ -29,3 +29,5 @@ hs_err_pid*
 classes/
 *.xml
 .idea/*
+*.project
+*.classpath
