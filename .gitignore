@@ -28,3 +28,4 @@ hs_err_pid*
 *.xml
 classes/
 *.xml
+.idea/*
