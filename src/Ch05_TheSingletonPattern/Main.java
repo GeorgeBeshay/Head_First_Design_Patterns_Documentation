@@ -13,7 +13,7 @@ public class Main extends Thread{
 
     @Override
     public void run(){
-        System.out.println(Singleton.getInstance().toString());
-//        System.out.println(SignletonEnum.UNIQUE_INSTANCE.foo());
+//        System.out.println(Singleton.getInstance().hashCode());
+        System.out.println(SignletonEnum.UNIQUE_INSTANCE.get().hashCode());
     }
 }
