@@ -2,11 +2,9 @@ package Ch05_TheSingletonPattern;
 
 public class Singleton {
 
-//    private volatile static Singleton uniqueInstance;
-
     private Singleton(){}
 
-    // Option #0, bad for multithreading
+//     Option #0, bad for multithreading
 //    private static Singleton uniqueInstance;
 //    public static Singleton getInstance(){
 //        if(uniqueInstance == null)
@@ -22,7 +20,7 @@ public class Singleton {
 //        return uniqueInstance;
 //    }
 
-    // Option #2, Eager Evaluation
+    // Option #2, Eager Creation
 //    private static Singleton uniqueInstance = new Singleton();
 //    public static Singleton getInstance(){
 //        return uniqueInstance;
@@ -30,7 +28,7 @@ public class Singleton {
 
     // Option #3, Double-checked locking
     private volatile static Singleton uniqueInstance;
-    public synchronized static Singleton getInstance(){
+    public static Singleton getInstance(){
         if(uniqueInstance == null){
             // to acquire the lock associated with the Singleton class (class level synchronization)
             // notice that X.class, uses the class instance as a monitor (recall what is monitor ??)

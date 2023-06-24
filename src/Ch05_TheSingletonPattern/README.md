@@ -1,9 +1,5 @@
 # <p align="center"> Notes </p>
 ***
-## Design Principles
-- .
-
-***
 ## Sixth Design Patterns
 - **The Singleton Pattern** ensures a class has only one instance, and provides a global
 point of access to it.
@@ -11,7 +7,7 @@ point of access to it.
 ***
 ### Notes on the DP
 - Singleton objects are only created when they are needed. (Lazy Instantiation)
-- The simple implementation for the pattern would result in a non expected 
+- The simple implementation for the pattern would result in a non-expected 
 behaviour when dealing with a multithreaded application, that's why it is suggested to implement
 the getInstance() method as a synchronized method.
 - However, synchronizing the method is expensive, that's because it is only needed
