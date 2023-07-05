@@ -1,10 +1,11 @@
 # <p align="center"> Notes </p>
 ***
 ## 8th Design Pattern
-- **The  Adapter Pattern** converts the interface of a class into another interface the clients expect.
+- **The Adapter Pattern** converts the interface of a class into another interface the clients expect.
 Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.
 ## 9th Design Pattern
-- **The  Pattern**
+- **The Facade Pattern** provides a unified interface to a set of interfaces in a subsystem.
+Facade defines a higher level interface that makes the subsystem easier to use.
 
 ***
 ## The Adapter Pattern
@@ -36,5 +37,19 @@ subclasses.
 
 ### Real World Adapters
 - Enumerators & Iterators
-- 
- 
+
+<hr>
+
+### Facade Vs Adapter Vs Decorator Pattern
+- The Adapter pattern intent is to convert from one interface to another
+- The Facade pattern intent is to make a complex interface simpler
+- The Decorator pattern intent is to add responsibilities
+
+## The Facade Pattern
+- The facade pattern can take a complex subsystem and make it easier to use by implementing a 
+facade class that provides one, more reasonable interface, however you will still have the 
+access to the powerful subsystem components in any time.
+- The facade pattern not only simplifies an interface, it decouples a client from
+a subsystem of components.
+
+<hr> 
