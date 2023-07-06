@@ -6,6 +6,17 @@ Adapter lets classes work together that couldn't otherwise because of incompatib
 ## 9th Design Pattern
 - **The Facade Pattern** provides a unified interface to a set of interfaces in a subsystem.
 Facade defines a higher level interface that makes the subsystem easier to use.
+## Design Principle
+- `Principle Of Least Knowledge` aka: The Law Of Demeter, talk only to your immediate friends.
+- Guide Lines: from any method in an object, only invoke those methods that belong to:<br>
+  * The object itself
+  * Objects passed in as a parameter to the method
+  * Any object the method creates or instantiates
+  * Any components of the object (any reference to an object - field - 
+  with a HAS - A relationship)
+- Disadvantage:
+  * Applying this principle results in more 'wrapper' classes being written
+  to handle method calls to other components
 
 ***
 ## The Adapter Pattern
