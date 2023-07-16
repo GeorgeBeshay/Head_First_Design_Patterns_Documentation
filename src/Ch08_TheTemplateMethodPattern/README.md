@@ -9,7 +9,9 @@ algorithm without changing the algorithm's structure.
 
 ## Design Principle
 - **The Hollywood Principle** Don't Call us, we'll call you.
-
+- Used to prevent `dependency rot` (High level component depending on a low level component
+depending on a high level component and so on ..)
+- 
 <hr>
 
 ## Notes
