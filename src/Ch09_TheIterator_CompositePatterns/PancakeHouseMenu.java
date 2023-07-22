@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Iterator;
 
-public class PancakeHouseMenu implements Menu{
+public class PancakeHouseMenu implements Menu_IF {
 
     List<MenuItem> menuItems;
 

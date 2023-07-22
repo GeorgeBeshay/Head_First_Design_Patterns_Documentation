@@ -2,7 +2,7 @@ package Ch09_TheIterator_CompositePatterns;
 
 import java.util.Iterator;
 
-public class DinerMenu implements Menu{
+public class DinerMenu implements Menu_IF {
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
     MenuItem[] menuItems;
