@@ -7,6 +7,7 @@ public class GumballMachine {
     State noQuarterState;
     State hasQuarterState;
     State soldState;
+    State winnerState;
 
     State state;
     int count = 0;
@@ -16,6 +17,7 @@ public class GumballMachine {
         noQuarterState = new NoQuarterState(this);
         hasQuarterState = new HasQuarterState(this);
         soldState = new SoldState(this);
+        winnerState = new WinnerState(this);
 
         this.count = count;
         if(count > 0)
@@ -60,7 +62,27 @@ public class GumballMachine {
         return soldState;
     }
 
+    public State getWinnerState() {
+        return winnerState;
+    }
+
+    @Override
+    public String toString() {
+        return "\nGumballMachine{ " +
+                "count=" + count +
+                " }\n";
+    }
+
     public int getCount() {
         return count;
+    }
+
+    public void refill(int newCount){
+        if(state instanceof SoldOutState){
+            count += newCount;
+            setState(getNoQuarterState());
+        } else
+            System.out.println("Can't Refill .. the machine is not out of gumballs yet.");
+
     }
 }
