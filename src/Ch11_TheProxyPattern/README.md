@@ -1,7 +1,7 @@
 # <p align="center"> Notes </p>
 ***
 ## 13th Design Pattern
-- **The Proxy Pattern**
+- **The Proxy Pattern** provides a surrogate or placeholder for another object to control access to it.
 
 <hr>
 
@@ -19,4 +19,9 @@ further the client helper object returns it to the client object. We must notice
 and the service helper object are objects that don't contain any method logic, they are just used for networking and communication.
 - The client helper and service helper are known as `stub` and `skeleton` respectively.
 - For more information about the RMI, check the following [article](https://www.javatpoint.com/RMI)
-- 
+- Use the proxy pattern to create a representative object that controls access to another object, which may be remote, expensive
+to create, or in need of securing.
+- Some examples for proxies that control access:
+  - Remote proxy that controls access to a remote object.
+  - Virtual proxy that controls access to a resource that is expensive to create.
+  - Protection proxy that controls access to a resource based on the access rights.
