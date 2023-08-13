@@ -1,20 +1,20 @@
 package Ch12_CompoundPatterns;
 
-public class DuckSimulator_2
+public class DuckSimulator_3
 {
     public static void main(String[] args) {
-        (new DuckSimulator_2()).simulate();
+        (new DuckSimulator_3()).simulate(new CountingDuckFactory());
     }
-    private void simulate(){
+    private void simulate(AbstractDuckFactory duckFactory){
         Quackable[] quackables = {
-                new QuackCounter(new MallardDuck()),
-                new QuackCounter(new RedheadDuck()),
-                new QuackCounter(new DuckCall()),
-                new QuackCounter(new RubberDuck()),
+                duckFactory.createMallardDuck(),
+                duckFactory.createRedheadDuck(),
+                duckFactory.createDuckCall(),
+                duckFactory.createRubberDuck(),
                 new GooseAdapter(new Goose())
         };
 
-        System.out.println("Duck Simulator: With Decorator");
+        System.out.println("Duck Simulator: With Abstract Factory");
         for(Quackable quackable : quackables)
             simulate(quackable);
         System.out.println("The ducks quacked: " + QuackCounter.getNumberOfQuacks() + " times");
